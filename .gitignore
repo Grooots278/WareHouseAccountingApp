@@ -1,0 +1,25 @@
+# Временные файлы
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+
+# Логи
+*.log
+
+# Результаты сборки
+Debug/
+Release/
+
+# NuGet пакеты
+packages/
+
+# Редакторы
+.vscode/
+.idea/
+
+# Системные файлы
+Thumbs.db
+.DS_Store
