@@ -14,18 +14,18 @@ namespace ServerPartProgram.Models.User_Models
         [EmailAddress(ErrorMessage = "Некорректный формат email")]
         [Column("email")]
         [MaxLength(254)]
-        public string? Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Имя пользователя обязательно")]
         [Column("username")]
         [MinLength(3, ErrorMessage = "Имя пользователя должно быть минимум 3 символа")]
         [MaxLength(50, ErrorMessage = "Имя пользователя не должно превышать 50 символов")]
         [RegularExpression(@"^[a-zA-Z0-9_.-]+$", ErrorMessage = "Имя пользователя может содержать только буквы, цифры, точку, дефис и подчеркивание")]
-        public string? Username { get; set; }
+        public string Username { get; set; } = string.Empty;
 
         [Required]
         [Column("password_hash")]
-        public string? PasswordHash { get; set; }
+        public string PasswordHash { get; set; } = string.Empty;
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
